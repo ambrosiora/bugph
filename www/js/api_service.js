@@ -1,6 +1,6 @@
 app.service('APIService', function($http) {
   var self = this;
-  self.UrlApi = "http://192.168.1.45:8090";
+  self.UrlApi = "http://localhost:8090";
 
   self.obterTodosBugs = function (callback){
       return $http({
