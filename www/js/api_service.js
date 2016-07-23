@@ -9,5 +9,20 @@ app.service('APIService', function($http) {
       })
   }
 
+  self.postarBug = function(bug, callback){
+  	return $http({
+  		method: 'POST',
+  		url: self.UrlApi + '/api/bug',
+  		data: bug
+  	})
+  }
+
+  self.novosBugs = function(bug, callback){
+  	return $http({
+  		method: 'GET',
+  		url: self.UrlApi + '/api/novos?ultimo='+ultimo
+  	})
+  }
+
   return self;
 })

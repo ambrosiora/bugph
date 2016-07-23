@@ -7,6 +7,21 @@
 		<button class="button button-icon icon ion-ios-plus" ng-click="novoBug()"></button>
 	</ion-header-bar>
 	
+	<div class="novos-bugs" ng-show="quantidadeNovosBugs" ng-show="listaTodosBugs()">
+		<span ng-show="quantidadeNovosBugs	=== 1">
+			Um novo <b>Bug</b> acabou de acontecer, clique aqui para ver!
+		</span>
+		<span ng-show="quantidadeNovosBugs > 1 ">
+			{{quantidadeNovosBugs}} novos <b>Bug</b> acabaram de acontecer, clique aqui para ver!
+		</span>
+
+	</div>
+
+
+
+
+
+
 	<ion-content class="content_timeline">
 
 		  <div class="list card" ng-show="bug.foto">
